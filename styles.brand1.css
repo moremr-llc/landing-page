@@ -1,9 +1,0 @@
-:root{
-  --rv-5013: #2643E6;
-  --rv-3007: #0F172A;
-  --rv-135:  #F59E0B;
-
-  --brand-primary: var(--rv-5013);
-  --brand-secondary: var(--rv-3007);
-  --brand-accent: var(--rv-135);
-}
