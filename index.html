@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/styles.css?v=4">
-<link rel="stylesheet" href="/styles.brand.css?v=4">
+  <link rel="stylesheet" href="/styles.brand.css?v=4">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Sell without the stress — Marlon Rockwood">
@@ -22,6 +22,24 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <style>
+    /* Visually hide, but keep for screen readers & SEO */
+    .sr-only{
+      position:absolute !important; width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+    }
+    /* Inline hero styles so the new look shows even if external CSS is cached */
+    .hero.hero-with-image{
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.25)),
+        url('/hero.png') center / cover no-repeat;
+      color:#fff; border:0; box-shadow:none;
+      min-height: min(90vh, 560px);
+      display:flex; flex-direction:column; justify-content:center; align-items:center;
+      gap:12px; text-align:center;
+      border-radius: 16px;
+    }
+    .hero.hero-with-image h1{ color:#fff }
+    .hero.hero-with-image .cta{ box-shadow:0 8px 24px rgba(0,0,0,.25) }
     .cta{cursor:pointer}
     .alt{margin-top:14px;font-size:14px;color:var(--muted,#64748b)}
     .alt button{padding:8px 10px;border:0;border-radius:10px;font-weight:700}
@@ -31,8 +49,8 @@
 <body>
   <main class="wrap">
     <header class="hero hero-with-image">
-      <h1>Sell without the stress.</h1>
-      <p>Hassle-free home sale • Fast cash options</p>
+      <!-- Keep headline for accessibility; hide visually to avoid duplicating text in the image -->
+      <h1 class="sr-only">Sell without the stress.</h1>
 
       <!-- Email CTA with custom subject/body -->
       <a class="cta" id="email-cta"
