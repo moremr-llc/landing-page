@@ -10,10 +10,10 @@
   <!-- Root-level assets -->
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/styles.brand.css">
+  <link rel="stylesheet" href="/styles.css?v=3">
+  <link rel="stylesheet" href="/styles.brand.css?v=3">
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Sell without the stress — Marlon Rockwood">
   <meta property="og:description" content="Hassle-free home sale • Fast cash options • Email or call today.">
   <meta property="og:type" content="website">
@@ -22,6 +22,15 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <style>
+    /* Inline hero styles so the new look shows even if external CSS is cached/mismatched */
+    .hero.hero-with-image{
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.35)),
+        url('/hero.png') center / cover no-repeat;
+      color:#fff; border:0;
+    }
+    .hero.hero-with-image h1{ color:#fff }
+    .hero.hero-with-image p{ color:#e6edf5 }
     .cta{cursor:pointer}
     .alt{margin-top:14px;font-size:14px;color:var(--muted,#64748b)}
     .alt button{padding:8px 10px;border:0;border-radius:10px;font-weight:700}
@@ -69,11 +78,9 @@
       const link = document.getElementById('email-cta');
       const fallback = document.getElementById('fallback');
       const copyBtn = document.getElementById('copy-btn');
-
       link.addEventListener('click', function () {
         setTimeout(function () { if (!document.hidden) fallback.hidden = false; }, 900);
       });
-
       if (copyBtn) {
         copyBtn.addEventListener('click', async function () {
           try { await navigator.clipboard.writeText('marlon@marlonrockwood.com'); alert('Email copied!'); }
