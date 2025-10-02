@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marlon Rockwood — Contact</title>
+  <meta name="description" content="Reach Marlon Rockwood. Quick Email Me CTA and contact info.">
+  <meta name="theme-color" content="#2643E6">
+  <link rel="icon" type="image/png" href="/landing-page/favicon.png">
+  <link rel="apple-touch-icon" href="/landing-page/apple-touch-icon.png">
+  <link rel="stylesheet" href="/landing-page/styles.css">
+  <link rel="stylesheet" href="/landing-page/styles.brand.css">
+  <meta property="og:title" content="Marlon Rockwood — Contact">
+  <meta property="og:description" content="Quick Email Me CTA and contact info.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marlonrockwood.com/landing-page/">
+  <meta property="og:image" content="https://marlonrockwood.com/landing-page/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>.cta{cursor:pointer} .alt{margin-top:14px;font-size:14px;color:var(--muted,#64748b)} .alt button{padding:8px 10px;border:0;border-radius:10px;font-weight:700} .links{margin-top:12px}</style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>Hi, I'm Marlon</h1>
+      <p>This is a simple landing page using your brand tokens (RV 5013, RV 3007, RV 135). Tap below to email me.</p>
+      <a class="cta" id="email-cta"
+         href="mailto:marlon@marlonrockwood.com?subject=Inquiry%20from%20marlonrockwood.com&body=Hi%20Marlon%2C%0A%0AI%20saw%20your%20site%20and...">
+        Email Me
+      </a>
+      <div class="links">
+        <small><a href="tel:+1-555-555-5555" title="Replace with your real number">(optional) Call me</a></small>
+      </div>
+      <div class="alt" id="fallback" hidden>
+        If your email app didn’t open, <a href="mailto:marlon@marlonrockwood.com?subject=Inquiry%20from%20marlonrockwood.com&body=Hi%20Marlon%2C%0A%0AI%20saw%20your%20site%20and...">try again</a> or
+        <button id="copy-btn" type="button">Copy email</button> and paste it into your mail app.
+      </div>
+    </header>
+    <section class="swatches" aria-label="Brand color preview">
+      <div class="swatch s1"><span>RV 5013 (Primary)</span></div>
+      <div class="swatch s2"><span>RV 3007 (Secondary)</span></div>
+      <div class="swatch s3"><span>RV 135 (Accent)</span></div>
+    </section>
+    <footer class="foot">
+      <small>&copy; <span id="year"></span> Marlon</small>
+    </footer>
+  </main>
+<script>
+(function() {
+  const link = document.getElementById('email-cta');
+  const fallback = document.getElementById('fallback');
+  const copyBtn = document.getElementById('copy-btn');
+  link.addEventListener('click', function() {
+    setTimeout(function() { if (!document.hidden) fallback.hidden = false; }, 900);
+  });
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async function() {
+      try { await navigator.clipboard.writeText('marlon@marlonrockwood.com'); alert('Email copied!'); }
+      catch(e) { alert('Copy failed. Tap/hold the address to copy.'); }
+    });
+  }
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
