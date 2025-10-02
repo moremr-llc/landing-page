@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://marlonrockwood.com/landing-page/sitemap.xml
