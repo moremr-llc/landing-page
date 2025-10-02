@@ -53,3 +53,13 @@ p{ margin:0 0 24px; color: var(--muted); font-size: clamp(16px, 2.8vw, 18px); }
 .s2{ background: var(--brand-secondary, #0f172a); }
 .s3{ background: var(--brand-accent, #f59e0b); }
 .foot{ margin-top: 6px; text-align:center; color: var(--muted); }
+/* Hero with background image */
+.hero.hero-with-image{
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url('/landing-page/hero.jpg') center / cover no-repeat;
+  color: #fff;
+  border: 0;
+}
+.hero.hero-with-image h1{ color: #fff; }
+.hero.hero-with-image p{ color: #e6edf5; }
