@@ -2,6 +2,6 @@ name = "marlonrockwood-site"
 main = "./functions/[[path]].ts"
 compatibility_date = "2025-10-18"
 
-[[kv_namespaces]]
+2f4bbcd9430142e9915a5ace55809b60
 binding = "LEADS"
 id = "YOUR-LEADS-NAMESPACE-ID"
