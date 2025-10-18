@@ -1,0 +1,16 @@
+marlonrockwood-site/
+├─ index.html
+├─ styles/
+│  └─ tokens.css
+├─ sell/
+│  └─ index.html
+├─ buy/
+│  └─ index.html
+├─ functions/
+│  └─ api/
+│     └─ submit-lead.ts
+├─ public/
+│  ├─ robots.txt
+│  └─ sitemap.xml
+├─ wrangler.toml
+└─ .gitignore
