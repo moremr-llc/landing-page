@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Start Your Home Search | Marlon Rockwood</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/styles/tokens.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Start Your Home Search</h1>
+    <form class="card" method="POST" action="/api/submit-lead">
+      <input type="hidden" name="source" value="buy-page" />
+      <label>Full Name <input name="name" required /></label>
+      <label>Email <input type="email" name="email" required /></label>
+      <label>Phone <input name="phone" required /></label>
+      <label>Target Areas <input name="address" placeholder="Evanston 60201, Palatine 60067" required /></label>
+      <label>Budget (optional) <input name="budget" /></label>
+      <label>Beds/Baths (optional) <input name="beds_baths" /></label>
+      <label>Timeline (optional) <input name="timeline" /></label>
+      <button type="submit">Send My Criteria</button>
+      <p class="helper">By submitting, you agree to be contacted about your request.</p>
+    </form>
+    <p class="helper"><a href="/">← Back to Home</a></p>
+  </div>
+</body>
+</html>
