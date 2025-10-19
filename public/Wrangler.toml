@@ -3,5 +3,6 @@ main = "./functions/[[path]].ts"
 compatibility_date = "2025-10-18"
 
 2f4bbcd9430142e9915a5ace55809b60
+[[kv_namespaces]]
 binding = "LEADS"
-id = "YOUR-LEADS-NAMESPACE-ID"
+id = "b8f4a8e21e6d49a5b90c9a7d8b123456"
