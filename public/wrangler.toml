@@ -3,7 +3,7 @@ main = "./functions/[[path]].ts"
 compatibility_date = "2025-10-18"
 name = "marlonrockwood-site"
 main = "./functions/[[path]].ts"
-compatibility_date = "2025-10-18"
+compatibility_date = "2025-10-19"
 
 [[kv_namespaces]]
 binding = "LEADS"
