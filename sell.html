@@ -9,3 +9,10 @@
     <!-- Add any content or forms you need here -->
 </body>
 </html>
+<form action="/api/submit" method="POST">
+  <input name="name" placeholder="Full name" required />
+  <input name="email" type="email" placeholder="Email" required />
+  <input name="address" placeholder="Property address" />
+  <input type="hidden" name="source" value="buy-page" />
+  <button type="submit">Submit</button>
+</form>
