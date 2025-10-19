@@ -1,5 +1,5 @@
 name = "marlonrockwood"
-compatibility_date = "2025-10-18"
+compatibility_date = "2025-10-189"
 
 [[kv_namespaces]]
 binding = "LEADS"
