@@ -1,0 +1,6 @@
+name = "marlonrockwood"
+compatibility_date = "2025-10-18"
+
+[[kv_namespaces]]
+binding = "LEADS"
+id = "205ffae3bad44571ac40a4146b3c0813"
