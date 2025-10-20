@@ -1,26 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Marlon Rockwood — Real Estate • Chicago & North/NW Suburbs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Sell fast or buy smart with Marlon Rockwood LLC. Local investor and agent solutions for Chicago & North/NW suburbs." />
-  <link rel="stylesheet" href="/styles/tokens.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Marlon Rockwood LLC — Chicagoland Real Estate</title>
+  <meta name="description" content="Get a no-obligation cash offer or start your home search today in Chicago & North/NW suburbs."/>
+  <link rel="icon" href="/favicon.png" type="image/png"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="stylesheet" href="/styles.brand.css"/>
+
+  <!-- LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Marlon Rockwood LLC",
+    "url": "https://marlonrockwood.com",
+    "email": "marlon@marlonrockwood.com",
+    "telephone": "+18478505426",
+    "areaServed": "Chicago, IL"
+  }
+  </script>
 </head>
 <body>
-  <div class="container">
-    <h1>Marlon Rockwood LLC</h1>
-    <p class="helper">Chicago • Evanston • Arlington Heights • Palatine • Rolling Meadows</p>
+  <main class="container">
+    <header class="header">
+      <h1>Marlon Rockwood LLC</h1>
+      <div class="suburbs">Chicago · Evanston · Arlington Heights · Palatine · Rolling Meadows</div>
+    </header>
 
-    <div class="card">
+    <section class="card">
       <h2>How can I help?</h2>
       <p>Get a no-obligation cash offer or start your home search today.</p>
-      <p>
-        <a class="badge" href="/sell/">Sell My Home</a>
-        &nbsp; <a class="badge" href="/buy/">Buy a Home</a>
-      </p>
-      <p class="helper">Call <a href="tel:+1-XXX-XXX-XXXX">+1 (XXX) XXX-XXXX</a> or email <a href="mailto:you@yourdomain.com">you@yourdomain.com</a></p>
-    </div>
-  </div>
+
+      <div style="display:flex; gap:.5rem; flex-wrap:wrap;">
+        <a class="btn btn-outline" href="/sell.html">Sell My Home</a>
+        <a class="btn btn-primary" href="/buy.html">Buy a Home</a>
+      </div>
+
+      <div class="contact">
+        <a class="btn btn-outline" href="tel:+18478505426">Call +1 (847) 850-5426</a>
+        <a class="btn btn-primary" href="mailto:marlon@marlonrockwood.com">Email Me</a>
+      </div>
+
+      <p class="small">Prefer to copy? +1 (847) 850-5426 · marlon@marlonrockwood.com</p>
+    </section>
+  </main>
 </body>
 </html>
