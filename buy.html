@@ -35,3 +35,25 @@
   </main>
 </body>
 </html>
+<form action="/api/submit" method="post">
+  <label for="city">Enter your city:</label>
+  <input type="text" id="city" name="city" placeholder="e.g., Chicago" required>
+
+  <label for="bedrooms">Bedrooms:</label>
+  <select id="bedrooms" name="bedrooms" required>
+    <option value="1">1+</option>
+    <option value="2">2+</option>
+    <option value="3">3+</option>
+    <!-- Add more options as needed -->
+  </select>
+
+  <label for="bathrooms">Bathrooms:</label>
+  <select id="bathrooms" name="bathrooms" required>
+    <option value="1">1+</option>
+    <option value="2">2+</option>
+    <option value="3">3+</option>
+    <!-- Add more options as needed -->
+  </select>
+
+  <button type="submit">Find Homes</button>
+</form>
