@@ -15,22 +15,17 @@
 
     <section class="card">
       <form action="/api/submit" method="POST">
-        <input name="name" placeholder="Full name" required />
-        <input type="email" name="email" placeholder="Email" />
-        <input name="phone" placeholder="Phone" />
-        <input name="city" placeholder="Preferred city/neighborhood" />
-        <select name="bed_bath">
-          <option value="" selected>Bedrooms/Baths</option>
-          <option>2+ / 1+</option>
-          <option>3+ / 2+</option>
-          <option>4+ / 2+</option>
-        </select>
-
-        <input type="hidden" name="lead_type" value="buyer" />
-        <input type="hidden" name="source" value="buy-page" />
-
-        <button class="btn btn-primary" type="submit">Send Matches</button>
-      </form>
+  <input name="name" placeholder="Full name" required />
+  <input name="email" type="email" placeholder="Email" />
+  <input name="phone" type="tel" inputmode="tel" placeholder="Phone" />
+  <input name="address" placeholder="Property address" />
+  <input name="city" placeholder="City / neighborhood" />
+  <input name="zip" placeholder="ZIP" />
+  <input type="hidden" name="lead_type" value="seller" /> <!-- or "buyer" -->
+  <input type="hidden" name="source" value="sell-page" />
+  <input name="website" style="display:none"> <!-- honeypot -->
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
 
       <div class="contact">
         <a class="btn btn-outline" href="tel:+18478505426">Call +1 (847) 850-5426</a>
