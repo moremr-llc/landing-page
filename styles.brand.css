@@ -103,3 +103,12 @@ input:focus, textarea:focus, select:focus{
 
 /* Footer note */
 .small{ color:var(--brand-muted); font-size:.875rem; }
+/* Professional form spacing/labels */
+.form { display:grid; gap:.75rem; }
+.form label { font-weight:600; color:var(--brand-muted); font-size:.92rem; }
+.form input, .form select { width:100%; }
+
+/* Make the submit button full-width on mobile */
+@media (max-width: 540px){
+  .form .btn { width:100%; }
+}
