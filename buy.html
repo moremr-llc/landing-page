@@ -1,22 +1,71 @@
-<form action="/api/submit" method="post">
-  <label for="city">Enter your city:</label>
-  <input type="text" id="city" name="city" placeholder="e.g., Chicago" required>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Buy a Home — Marlon Rockwood LLC</title>
+  <meta name="description" content="Tell us what you’re looking for and we’ll send matches in Chicago and the North/Northwest suburbs."/>
+  <link rel="icon" href="/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="/styles.brand.css?v=buy-1"/>
 
-  <label for="bedrooms">Bedrooms:</label>
-  <select id="bedrooms" name="bedrooms" required>
-    <option value="1">1+</option>
-    <option value="2">2+</option>
-    <option value="3">3+</option>
-    <!-- Add more options as needed -->
-  </select>
+  <!-- Optional: basic schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Buy a Home",
+    "url": "https://marlonrockwood.com/buy.html",
+    "about": "Home search lead form for Chicagoland"
+  }
+  </script>
+</head>
+<body>
+  <main class="container">
+    <h1>Buy a Home</h1>
+    <p class="small">Tell us what you’re looking for and we’ll send matches.</p>
 
-  <label for="bathrooms">Bathrooms:</label>
-  <select id="bathrooms" name="bathrooms" required>
-    <option value="1">1+</option>
-    <option value="2">2+</option>
-    <option value="3">3+</option>
-    <!-- Add more options as needed -->
-  </select>
+    <section class="card">
+      <form class="form" action="/api/submit" method="POST">
+        <!-- contact -->
+        <label for="name">Full name</label>
+        <input id="name" name="name" placeholder="Full name" required autocomplete="name"/>
 
-  <button type="submit">Find Homes</button>
-</form>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Email" autocomplete="email"/>
+
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" inputmode="tel" name="phone" placeholder="Phone" autocomplete="tel"/>
+
+        <!-- search criteria -->
+        <label for="city">City / neighborhood</label>
+        <input id="city" name="city" placeholder="e.g., Chicago, Arlington Heights, Evanston" required/>
+
+        <label for="spec">Bedrooms / Baths</label>
+        <select id="spec" name="spec" required>
+          <option value="" selected>Choose…</option>
+          <option>1+ / 1+</option>
+          <option>2+ / 1+</option>
+          <option>3+ / 1+</option>
+          <option>3+ / 2+</option>
+          <option>4+ / 2+</option>
+          <option>5+ / 3+</option>
+        </select>
+
+        <!-- hidden meta -->
+        <input type="hidden" name="lead_type" value="buyer"/>
+        <input type="hidden" name="source" value="buy-page"/>
+        <input type="hidden" name="website" value=""/> <!-- honeypot, leave empty -->
+
+        <button class="btn btn-primary" type="submit">Send Matches</button>
+      </form>
+
+      <div class="contact">
+        <a class="btn btn-outline" href="tel:+18478505426">Call +1 (847) 850-5426</a>
+        <a class="btn btn-primary" href="mailto:marlon@marlonrockwood.com">Email Me</a>
+      </div>
+
+      <p class="small">Prefer to copy? +1 (847) 850-5426 · marlon@marlonrockwood.com</p>
+    </section>
+  </main>
+</body>
+</html>
